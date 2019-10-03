@@ -1,17 +1,14 @@
-import React, { Component } from "react";
-import ReactDom from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+  <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
+        {backdrop}
+        <AccountList accounts={this.state.data} />
 
-//COMPONENTS
-import Navbar from "./components/Navbar/Navbar";
-import SideDrawer from "./components/SideDrawer/SideDrawer";
-import "./index.css";
-import Backdrop from "./components/Backdrop/Backdrop";
-import AccountList from "./components/Account/Account_list";
-import JSON from "./file.json";
-import Actionpage from "./components/ActionPage/Actionpage";
 
-class App extends Component {
+
+
+
+
+        class App extends Component {
   state = {
     sideDrawerOpen: false,
     data: JSON
@@ -37,17 +34,48 @@ class App extends Component {
         <BrowserRouter>
         <div style={{ height: "100%" }}>
         
+            <Route path="/Actionpage" Component={Actionpage} />
+        
             <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
             <SideDrawer show={this.state.sideDrawerOpen} />
             {backdrop}
-        <Route path = "/actionpage" exact component={Actionpage}/>
-        
             <AccountList accounts={this.state.data} />
             </div>
             </BrowserRouter>
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+import React  from "react";
+import ReactDom from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+
+//COMPONENTS
+import Actionpage from "./components/ActionPage/Actionpage";
+import Home from "./components/Home/home";
+
+
+
+const App = () => {
+return(
+   <BrowserRouter>
+    <Route path = "/actionpage" component={Actionpage}/>
+    <Home/>
+   </BrowserRouter>
+ 
+)
+}
+    
+
 
 
 

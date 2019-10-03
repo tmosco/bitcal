@@ -37,18 +37,16 @@ class App extends Component {
         <BrowserRouter>
         <div style={{ height: "100%" }}>
         
+            <Route path="/Actionpage" Component={Actionpage} />
+        
             <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
             <SideDrawer show={this.state.sideDrawerOpen} />
             {backdrop}
-        <Route path = "/actionpage" exact component={Actionpage}/>
-        
             <AccountList accounts={this.state.data} />
             </div>
             </BrowserRouter>
     );
   }
 }
-
-
 
 ReactDom.render(<App />, document.querySelector("#root"));
