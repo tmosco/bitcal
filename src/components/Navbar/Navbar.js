@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import DrawerTogglerButton from "../SideDrawer/DrawerTogglerButton";
+import {Link} from 'react-router-dom';
 
 
 const Navbar = props => (
@@ -13,10 +14,10 @@ const Navbar = props => (
       <div className="link_items">
         <ul>
           <li>
-            <a href="/#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/#">Accounts</a>
+          <Link to="/actionpage">Actionpage</Link>
           </li>
         </ul>
       </div>

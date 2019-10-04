@@ -1,54 +1,82 @@
-import React, { Component } from "react";
+import React,{Component}  from "react";
 import ReactDom from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
 
 //COMPONENTS
+
+import Actionpage from "./components/ActionPage/Actionpage";
+import Home from "./components/Home/home";
 import Navbar from "./components/Navbar/Navbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
-import "./index.css";
 import Backdrop from "./components/Backdrop/Backdrop";
-import AccountList from "./components/Account/Account_list";
-import JSON from "./file.json";
-import Actionpage from "./components/ActionPage/Actionpage";
+
+
+
 
 class App extends Component {
-  state = {
-    sideDrawerOpen: false,
-    data: JSON
-  };
-
-  drawerToggleClickHandler = () => {
-    this.setState(prevState => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
-    });
-  };
-
-  backdropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false });
-  };
-
-  render() {
-    let backdrop;
-
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
-    }
-    return (
-        <BrowserRouter>
-        <div style={{ height: "100%" }}>
+    state = {
+      sideDrawerOpen: false,
+         };
+  
+    drawerToggleClickHandler = () => {
+      this.setState(prevState => {
+        return { sideDrawerOpen: !prevState.sideDrawerOpen };
+      });
+    };
+  
+    backdropClickHandler = () => {
+      this.setState({ sideDrawerOpen: false });
+    };
+  
+    render() {
+        let backdrop;
+    
+        if (this.state.sideDrawerOpen) {
+          backdrop = <Backdrop click={this.backdropClickHandler} />;
+        }
+        return (
         
-            <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
-            <SideDrawer show={this.state.sideDrawerOpen} />
-            {backdrop}
-        <Route path = "/actionpage" exact component={Actionpage}/>
-        
-            <AccountList accounts={this.state.data} />
-            </div>
-            </BrowserRouter>
-    );
-  }
+          <BrowserRouter>
+                  <div style={{ height: "100%" }}>
+                  
+                  <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                  <SideDrawer show={this.state.sideDrawerOpen} />
+                  {backdrop}
+                  <Route path = "/" exact component={Home}/>
+                  <Route path = "/actionpage" component={Actionpage}/>
+               </div>
+               </BrowserRouter>
+           
+          
+        );
+      }
+
+
+
+
 }
 
 
+
+
+
+
+
+
+
+
+
+// const App = () => {
+//     return (
+//         <BrowserRouter>
+//         <div style={{ height: "100%" }}>
+        
+//         <Route path = "/"  component={Home}/>
+//         <Route path = "/actionpage" component={Actionpage}/>
+//      </div>
+//      </BrowserRouter>
+            
+//     );
+// }
 
 ReactDom.render(<App />, document.querySelector("#root"));
