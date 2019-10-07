@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-
+import styled from '@emotion/styled'
 const Styles = styled.div`
 display:flex;
 display-item:center;

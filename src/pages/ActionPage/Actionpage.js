@@ -1,10 +1,8 @@
 import React from "react";
-// import './ActionPage.css';
 import Slider from "./slider/slider";
-
-import styled from "styled-components";
+import styled from '@emotion/styled'
 import Spread from "./slider/spread";
-import Numbers from "../Account/Numbers";
+
 
 const Styles = styled.div`
 .slider{
@@ -20,7 +18,7 @@ const Actionpage = () => {
   return (
     <Styles>
       <div>
-      <Numbers/>
+    
       <div className="slider">
       <Slider />
       <Spread/>
