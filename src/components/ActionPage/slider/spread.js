@@ -67,15 +67,14 @@ const Button = styled.button`
     }
   }
 `;
-const Title = styled.h5`
-  text-align: center;
-`;
 
-class Slider extends React.Component {
+class Spread extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 4
+      value: 4,
+      max_value: 10,
+      min_value: 1
     };
   }
 
@@ -103,7 +102,7 @@ class Slider extends React.Component {
     return (
       <Styles>
         <div className="box">
-          <Title>Multipler</Title>
+          <h5>Spread</h5>
           <div className="range-bar">
             <span id="rangeValue"></span>
             <Button
@@ -134,4 +133,4 @@ class Slider extends React.Component {
   }
 }
 
-export default Slider;
+export default Spread;

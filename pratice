@@ -80,3 +80,160 @@ return(
 
 
 ReactDom.render(<App />, document.querySelector("#root"));
+
+
+
+
+
+  <div>
+      <div className="container">
+          <div id="checkboxes" className="all-market">
+            <div>
+              <input type="checkbox" name="rGroup" value="1" id="r1" />
+              <label class="whatever" for="r1">
+                {" "}
+                Market1
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="2" id="r2" />
+              <label class="whatever" for="r2">
+                Market2{" "}
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="3" />
+              <label class="whatever" for="3">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="r4" />
+              <label class="whatever" for="r4">
+                Market4
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="r5" />
+              <label class="whatever" for="r5">
+                Market5
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="r7" />
+              <label class="whatever" for="r7">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="r9" />
+              <label class="whatever" for="r9">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="r10" />
+              <label class="whatever" for="r10">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="r11" />
+              <label class="whatever" for="r11">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="r12" />
+              <label class="whatever" for="r12">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="r13" />
+              <label class="whatever" for="r13">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="14" />
+              <label class="whatever" for="14">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="15" />
+              <label class="whatever" for="15">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="16" />
+              <label class="whatever" for="16">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="17" />
+              <label class="whatever" for="17">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="18" />
+              <label class="whatever" for="18">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="19" />
+              <label class="whatever" for="19">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="20" />
+              <label class="whatever" for="20">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="21" />
+              <label class="whatever" for="21">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="22" />
+              <label class="whatever" for="22">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="23" />
+              <label class="whatever" for="23">
+                Market3
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="rGroup" value="3" id="24" />
+              <label class="whatever" for="24">
+                Market3
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="button_cont" align="center">
+          <a
+            class="button-style"
+            href="add-website-here"
+            target="_blank"
+            rel="nofollow noopener"
+          >
+            Process Value
+          </a>
+        </div>
+      </div>
+  
+  );

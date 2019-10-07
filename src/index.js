@@ -4,11 +4,11 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 //COMPONENTS
 
-import Actionpage from "./components/ActionPage/Actionpage";
-import Home from "./components/Home/home";
 import Navbar from "./components/Navbar/Navbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
+import Routes from "./route";
+
 
 
 
@@ -42,8 +42,7 @@ class App extends Component {
                   <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
                   <SideDrawer show={this.state.sideDrawerOpen} />
                   {backdrop}
-                  <Route path = "/" exact component={Home}/>
-                  <Route path = "/actionpage" component={Actionpage}/>
+                 <Routes/>
                </div>
                </BrowserRouter>
            

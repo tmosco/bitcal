@@ -12,14 +12,15 @@ class Home extends Component {
     data: JSON
   };
 
-
+rf
 
   render() {
     
     return (
-     
-        <AccountList accounts={this.state.data} />
-     
+     <div>
+     <AccountList accounts={this.state.data} />
+         
+     </div>
     );
   }
 }

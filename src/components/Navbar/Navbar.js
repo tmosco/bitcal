@@ -19,6 +19,9 @@ const Navbar = props => (
           <li>
           <Link to="/actionpage">Actionpage</Link>
           </li>
+          <li>
+          <Link to="/market">Market</Link>
+          </li>
         </ul>
       </div>
     </nav>
