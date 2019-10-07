@@ -99,22 +99,18 @@ export const Market = () => {
   return (
     <ComponentStyle>
       <div className="all-market">
-        <div className="container">
-          {data}
-          </div>
-          </div>
-          <div class="button_cont" align="center">
-            <a
-              class="button-style"
-              href="add-website-here"
-              target="_blank"
-              rel="nofollow noopener"
-            >
-              Process Value
-            </a>
-          </div>
+        <div className="container">{data}</div>
+      </div>
+      <div class="button_cont" align="center">
+        <a
+          class="button-style"
+          href="add-website-here"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          Process Value
+        </a>
+      </div>
     </ComponentStyle>
   );
 };
-
-

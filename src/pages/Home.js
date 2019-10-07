@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 /** @jsx jsx */ import { css, jsx } from "@emotion/core";
 import JSON from "../pages/file.json";
 
@@ -18,20 +18,18 @@ const AccountItem = ({ account }) => {
       </div>
     </div>
   );
-  }
+};
 
-  export const Home = () => {
-    const [data] = useState(JSON);
-    return (
-      <div>
-        <div className="buttons">
-          <button> Fetch Accounts</button>
-        </div>
-        {data.map(account => {
-          return <AccountItem account={account} />;
-        })}
+export const Home = () => {
+  const [data] = useState(JSON);
+  return (
+    <div>
+      <div className="buttons">
+        <button> Fetch Accounts</button>
       </div>
-    );
-  };
-
-
+      {data.map(account => {
+        return <AccountItem account={account} />;
+      })}
+    </div>
+  );
+};
