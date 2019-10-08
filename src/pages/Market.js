@@ -1,5 +1,5 @@
 import React from "react";
-import JSON from "./data.json";
+import {AppContex} from '../utils';
 import styled from "@emotion/styled";
 
 const ComponentStyle = styled.div`
@@ -83,8 +83,11 @@ const ComponentStyle = styled.div`
   }
 `;
 
-export const Market = () => {
-  const data = JSON.map(market => {
+export const Market = ({match}) => {
+  console.log(match.params);
+  const account_markets = JSON.filter(
+    market => market.account_id === match.params.account);
+  const data = account_markets.map(market => {
     return (
       <div id="checkboxes">
         <div>

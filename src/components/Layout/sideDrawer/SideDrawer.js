@@ -16,11 +16,9 @@ const Style = styled.div`
     transform: translateX(-100%);
     transition: transform 0.3s ease-out;
   }
-
   .side-drawer.open {
     transform: translateX(0);
   }
-
   .side-drawer ul {
     height: 100%;
     list-style: none;
@@ -28,22 +26,18 @@ const Style = styled.div`
     flex-direction: column;
     justify-content: center;
   }
-
   .side-drawer li {
     margin: 0.5rem 0;
   }
-
   .side-drawer a {
     color: black;
     text-decoration: none;
     font-size: 1.2rem;
   }
-
   .side-drawer a:hover,
   .side-drawer a:active {
     color: #d4af37;
   }
-
   @media (min-width: 769px) {
     .side-drawer {
       display: none;
@@ -76,7 +70,3 @@ const SideDrawer = props => {
 };
 
 export default SideDrawer;
-
-
-
-

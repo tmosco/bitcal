@@ -1,8 +1,9 @@
-import { useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from "react";
 /** @jsx jsx */ import { css, jsx } from "@emotion/core";
-import JSON from "../pages/file.json";
 
-const AccountItem = ({ account }) => {
+
+const AccountItem = ({ account, onClick }) => {
   return (
     <div className="container">
       <div
@@ -13,6 +14,7 @@ const AccountItem = ({ account }) => {
           padding: 20px;
           margin-top: 25px;
         `}
+        onClick={onClick}
       >
         {account.title}
       </div>
@@ -20,15 +22,19 @@ const AccountItem = ({ account }) => {
   );
 };
 
-export const Home = () => {
-  const [data] = useState(JSON);
+export const Home = ({ history }) => {
   return (
     <div>
       <div className="buttons">
         <button> Fetch Accounts</button>
       </div>
-      {data.map(account => {
-        return <AccountItem account={account} />;
+      {accounts.map(account => {
+        return (
+          <AccountItem
+            onClick={() => history.push(`/market/${account.slug}`)}
+            account={account}
+          />
+        );
       })}
     </div>
   );

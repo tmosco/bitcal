@@ -7,9 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/Layout/Navbar";
 import SideDrawer from "./components/Layout/sideDrawer/SideDrawer";
 import Backdrop from "./components/Layout/sideDrawer/Backdrop";
-import { Home, Market } from "./pages";
-import Actionpage from "./pages/ActionPage/Actionpage";
-// import Actionpage from "./components/Pages/ActionPage/Actionpage";
+import { Home, Market, Actionpage } from "./pages";
 
 function App() {
   const [sideDrawerOpen, setSideDrawer] = useState(false);
@@ -33,7 +31,7 @@ function App() {
         <Switch>
           <div>
           <Route path="/actionpage" component={Actionpage}/>
-            <Route path="/market" component={Market} />
+            <Route path="/market/:account" component={Market} />
             <Route path="/" exact component={Home} />
           </div>
         </Switch>
